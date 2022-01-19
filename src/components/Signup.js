@@ -1,7 +1,8 @@
 import useForm from "../hooks/useForm";
+import validateInfo from "../utils/validateInfo";
 
 const Signup = () => {
-  const { handleChange, values, handleSubmit } = useForm();
+  const { handleChange, values, handleSubmit } = useForm(validateInfo);
 
   return (
     <div className="form-content-right">

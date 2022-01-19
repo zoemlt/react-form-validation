@@ -1,5 +1,6 @@
 import useForm from "../hooks/useForm";
 import validate from "../utils/validateInfo";
+import "../css/Form.css";
 
 const Signup = () => {
   const { handleChange, values, handleSubmit, errors } = useForm(validate);
@@ -29,7 +30,7 @@ const Signup = () => {
           </label>
           <input
             id="email"
-            type="text"
+            type="email"
             name="email"
             placeholder="Enter your email"
             className="form-input"

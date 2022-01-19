@@ -1,7 +1,11 @@
+import useForm from "../hooks/useForm";
+
 const Signup = () => {
+  const { handleChange, values, handleSubmit } = useForm();
+
   return (
     <div className="form-content-right">
-      <form className="form">
+      <form className="form" onSubmit={handleSubmit}>
         <h1>Signup here</h1>
         <div className="form-inputs">
           <label htmlFor="username" className="form-label">
@@ -13,6 +17,8 @@ const Signup = () => {
             name="username"
             placeholder="Enter your username"
             className="form-input"
+            value={values.username}
+            onChange={handleChange}
           />
         </div>
         <div className="form-inputs">
@@ -25,6 +31,8 @@ const Signup = () => {
             name="email"
             placeholder="Enter your email"
             className="form-input"
+            value={values.email}
+            onChange={handleChange}
           />
         </div>
         <div className="form-inputs">
@@ -33,10 +41,12 @@ const Signup = () => {
           </label>
           <input
             id="password"
-            type="text"
+            type="password"
             name="password"
             placeholder="Enter your password"
             className="form-input"
+            value={values.password}
+            onChange={handleChange}
           />
         </div>
         <div className="form-inputs">
@@ -45,10 +55,12 @@ const Signup = () => {
           </label>
           <input
             id="password2"
-            type="text"
+            type="password"
             name="password2"
             placeholder="Confirm your password"
             className="form-input"
+            value={values.password2}
+            onChange={handleChange}
           />
         </div>
         <button className="form-input-btn" type="submit">
